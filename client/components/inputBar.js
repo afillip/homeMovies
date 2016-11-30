@@ -9,14 +9,14 @@ export default class InputBar extends React.Component{
 	}
 
 	_submitNewMovie(e){
-		// e.preventDefault()
-		// console.log("data", e)
+		e.preventDefault()
+		console.log("data", e.target.value)
 	}
 
 	render(){
 		return(
 			<div className = 'input-bar'>
-				<form onSubmit={console.log("form", this)}>
+				<form>
 					<div className='form-group row'>
 						<label className="col-xs-8 col-form-label">Title</label>
 						<div className="col-xs-8">
@@ -44,10 +44,10 @@ export default class InputBar extends React.Component{
 					<div className='form-group row'>
 						<label className="col-xs-8 col-form-label">Year</label>
 						<div className="col-xs-8">
-							<input type='text' className='form-control' id='inputYear'/>
+							<input type='text' className='form-control' id='inputYear' onChange={this._submitNewMovie.bind(this)}/>
 						</div>
 					</div>
-					<button type="submit" className="btn btn-primary">Submit</button>
+					<button type="submit" className="btn btn-primary" >Submit</button>
 				</form>
 			</div>
 		)
