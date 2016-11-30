@@ -11,7 +11,7 @@ export default class MovieList extends React.Component{
 	render(){
 		return(
 			<div className='movieList'>
-				<h3> Movie Listing! </h3>
+				<h3> Movie Listing STORAGE! </h3>
 			</div>
 		)
 	}

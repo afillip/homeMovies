@@ -11,7 +11,7 @@ export default class MovieResults extends React.Component{
 	render(){
 		return(
 			<div className = 'movieResults'>
-				<h3> Movie Results </h3>
+				<h3> Movie Results FROM SEARCH </h3>
 			</div>
 		)
 	}

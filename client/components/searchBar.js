@@ -9,12 +9,25 @@ export default class SearchBar extends React.Component{
 		}
 	}
 
+	_handleInputChange(e){
+		this.props._handleSearchInputChange(e.target.value)
+		this.setState({
+			value:e.target.value
+		})
+	}
+
 	render(){
 		return(
-			<div>
-				<form className ='searchForm'>
-					<input type='text' className ='search'/>
-					<input type='submit' className='subButton'/>
+			<div className='search-bar'>
+				<form>
+					<div className='form-group row'>
+						<label className="col-xs-8 col-form-label">Find Movies</label>
+						<div className="col-xs-8">
+							<input type='text' className='form-control' id='findMovies'/>
+						</div>
+					</div>
+					<button type="submit" className="btn btn-primary">Submit</button>
+
 				</form>
 			</div>
 		)

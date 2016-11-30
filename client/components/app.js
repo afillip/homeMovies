@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SearchBar from '../components/searchBar';
+import NavBar from '../components/navBar';
 import MovieList from '../components/movieList';
 import MovieResults from '../components/movieResults';
 
@@ -8,16 +8,23 @@ export default class App extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			messages: {}
+			messages: [],
 		}
+	}
+	_handleSearchInputChange(){
+
 	}
 
 	render(){
 		return(
 			<div>
-				<SearchBar />
-				<MovieResults />
-				<MovieList />
+				<NavBar _handleSearchInputChange={this._handleSearchInputChange}/>
+				<div className="col-md-7">
+					<MovieResults />
+				</div>
+				<div className="col-md-5">
+					<MovieList />
+				</div>
 			</div>
 		)
 	}
