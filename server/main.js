@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, "../client/public")));
 
 app.get('/app-bundle.js',
- browserify('../client/main.js', {
+ browserify('../homeMovies/client/main.js', {
     transform: [ [ require('babelify'), { presets: ["es2015", "react"] } ] ]
   })
 );
