@@ -1,0 +1,8 @@
+.movieList{
+	float: right;
+	border: 2px solid grey;
+}
+.movieResults{
+	float: left;
+	border: 2px solid grey;
+}
